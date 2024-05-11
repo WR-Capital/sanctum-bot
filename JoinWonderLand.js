@@ -29,15 +29,15 @@ const pwd = readlineSync.question('Please enter your password: ', {
     hideEchoBack: true // 密码不回显
 });
 
-const wallet_path = '/Users/lishuai/Documents/crypto/bockchainbot/SOLTestWalle加密.csv'; // 钱包文件路径
-const referralCode = '5RL3SE'; // 邀请码
+const wallet_path = ''; // 钱包文件路径
+const referralCode = ''; // 邀请码
 
 const proxy = {
-    host: '85.239.53.78',
+    host: '',
     port: 33000,
     auth: {
-      username: 'wrtest66781-sess_8zix1690gxdp_1+hk',
-      password: 'AsdBBcDtRERy'
+      username: '',
+      password: ''
     }
   }
 
@@ -116,6 +116,7 @@ const wallets = convertCSVToObjectSync(wallet_path);
         }
         if (i < wallets.length - 1) {
             // 随机暂停 5-10分钟
+            
             const sleepTime = Math.floor(Math.random() * (10 - 5) + 5);
             logger.info(`休息${sleepTime}分钟后继续...`)
             await sleep(sleepTime);
