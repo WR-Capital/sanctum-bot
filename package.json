@@ -1,0 +1,30 @@
+{
+  "name": "sanctum-bot",
+  "version": "1.0.0",
+  "description": "Sanctum 交易SLT Token",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.29.0",
+    "@project-serum/anchor": "^0.26.0",
+    "@solana/spl-token": "^0.4.1",
+    "@solana/web3.js": "^1.91.8",
+    "@youpaichris/logger": "^5.0.0",
+    "axios": "^1.6.8",
+    "axios-https-proxy-fix": "^0.17.1",
+    "bs58": "^5.0.0",
+    "cross-fetch": "^4.0.0",
+    "dotenv": "^16.4.5",
+    "Logger": "^0.0.0",
+    "papaparse": "^5.4.1",
+    "promise-retry": "^2.0.1",
+    "readline-sync": "^1.4.10",
+    "tweetnacl": "^1.0.3"
+  }
+}
