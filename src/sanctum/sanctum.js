@@ -163,8 +163,6 @@ class Sanctum {
         
         const swapTransactionBuf = Buffer.from(swapResult.tx, 'base64');
         let transaction = VersionedTransaction.deserialize(swapTransactionBuf);
-        console.log(transaction);
-        process.exit(0);
 
         // sign the transaction
         transaction.sign([this.wallet.payer]);
@@ -210,6 +208,22 @@ class Sanctum {
         //     maxRetries: 50
         // });
         // return await connection.confirmTransaction(txid);
+    }
+
+    async answerQuestions(QuestionId, answer) {
+        const url = `https://wonderland-api2.ngrok.dev/s1/quests/answer/${QuestionId}`; // 修改这里
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "pk": this.wallet.publicKey.toBase58(),
+                "value": {answer}
+            })
+        });
+        const data = await response.json();
+        return data;
     }
 }
 
