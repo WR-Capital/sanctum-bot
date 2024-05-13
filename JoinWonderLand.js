@@ -33,11 +33,11 @@ const wallet_path = ''; // 钱包文件路径
 const referralCode = ''; // 邀请码
 
 const proxy = {
-    host: '',
-    port: 33000,
+    host: '', // 代理服务器地址
+    port: 33000, // 端口
     auth: {
-      username: '',
-      password: ''
+      username: '', // 代理用户名
+      password: '' // 代理密码
     }
   }
 
@@ -67,7 +67,7 @@ const wallets = convertCSVToObjectSync(wallet_path);
         // 创建一个新的密钥对，代表一个钱包
         const wallet = Keypair.fromSecretKey(bs58.decode(privateKey));
 
-        // // 创建一个新的密钥对，代表一个钱包
+        // 创建一个新的密钥对，代表一个钱包
         // const wallet = Keypair.generate();
 
         logger.info(`地址: ${wallet.publicKey.toBase58()} , 开始加入Wonderland...`);
